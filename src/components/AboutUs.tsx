@@ -16,10 +16,10 @@ const AboutUs: React.FC = () => {
             <div className="bg-white shadow-md rounded-lg p-8">
               <h3 className="text-2xl font-bold text-pizza-brown mb-4">How AAKHRI PIZZA Was Born</h3>
               <p className="text-gray-700 mb-4">
-                AAKHRI PIZZA was born from a simple yet profound realization—that every pizza should be crafted as if it were the last pizza you'll ever taste. Founded in 2010 by siblings Raj and Priya Sharma, our journey began in a small kitchen in Mumbai with a single wood-fired oven and an unwavering commitment to quality.
+                AAKHRI PIZZA was founded by Reaper in Jaipur in 2025, with a vision that every pizza should be crafted as if it were the last pizza you'll ever taste. Our journey began in a small kitchen in Jaipur with a single wood-fired oven and an unwavering commitment to quality.
               </p>
               <p className="text-gray-700 mb-4">
-                The name "AAKHRI" meaning "final" or "ultimate" in Hindi, represents our philosophy—each pizza is prepared with the dedication as if it's the last one we'll ever make. This passion for perfection quickly gained a following, and what started as a small family operation expanded to multiple cities across India.
+                The name "AAKHRI" meaning "final" or "ultimate" in Hindi, represents our philosophy—each pizza is prepared with the dedication as if it's the last one we'll ever make. This passion for perfection quickly gained a following, and what started as a small operation expanded to multiple cities across India.
               </p>
               <p className="text-gray-700">
                 Today, we continue to honor our founding principles: using only the freshest ingredients, following traditional techniques, and treating each customer like family. Every AAKHRI PIZZA location maintains the same standards of excellence that made our first location successful.

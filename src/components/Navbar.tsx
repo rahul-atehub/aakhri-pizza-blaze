@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
           
           {/* Search and Profile */}
           <div className="hidden md:flex items-center space-x-4">
-            <SearchBar />
+            <SearchBar onNavigate={handleNavClick} />
             <ProfileSection />
           </div>
           
@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="container mx-auto px-4 py-3">
             <div className="py-3">
-              <SearchBar />
+              <SearchBar onNavigate={handleNavClick} />
             </div>
             {navItems.map((item) => (
               <button
