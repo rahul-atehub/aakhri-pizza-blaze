@@ -62,7 +62,7 @@ const Menu: React.FC<{ setActivePage: (page: string) => void }> = ({ setActivePa
       name: "Spicy Tandoori",
       description: "Tandoori spiced chicken with bell peppers and onions",
       price: 389,
-      image: "https://images.unsplash.com/photo-1594007654729-407eedc4fe0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
       category: "non-vegetarian"
     },
     {
