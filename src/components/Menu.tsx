@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -17,7 +16,6 @@ interface PizzaItem {
 const Menu: React.FC<{ setActivePage: (page: string) => void }> = ({ setActivePage }) => {
   const [activeCategory, setActiveCategory] = useState('all');
   
-  // Pizza menu items
   const pizzas: PizzaItem[] = [
     {
       id: 1,
@@ -100,7 +98,6 @@ const Menu: React.FC<{ setActivePage: (page: string) => void }> = ({ setActivePa
     setActivePage('order-online');
   };
 
-  // Filter pizzas based on active category
   const filteredPizzas = activeCategory === 'all' 
     ? pizzas 
     : pizzas.filter(pizza => pizza.category === activeCategory);
@@ -182,14 +179,28 @@ interface PizzaCardProps {
 }
 
 const PizzaCard: React.FC<PizzaCardProps> = ({ pizza, onAddToCart, onOrderNow }) => {
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
+    console.error(`Failed to load image for pizza: ${pizza.name}`);
+  };
+
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
       <div className="h-48 overflow-hidden">
-        <img 
-          src={pizza.image} 
-          alt={pizza.name}
-          className="w-full h-full object-cover transition-transform hover:scale-105"
-        />
+        {!imageError ? (
+          <img 
+            src={pizza.image} 
+            alt={pizza.name}
+            onError={handleImageError}
+            className="w-full h-full object-cover transition-transform hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full bg-pizza-orange flex items-center justify-center text-pizza-brown">
+            Image Unavailable
+          </div>
+        )}
       </div>
       <CardHeader className="pb-2">
         <CardTitle className="text-pizza-brown">{pizza.name}</CardTitle>
