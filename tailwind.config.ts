@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom pizza theme colors
+				pizza: {
+					'orange': '#FDE1D3',
+					'orange-dark': '#F8B195',
+					'off-white': '#EEEEEE',
+					'brown': '#8B4513',
+					'text': '#5D4037'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,19 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'pizza-pattern': "url('/pizza-pattern.svg')"
 			}
 		}
 	},
