@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Chef, Clock, Award, Users } from 'lucide-react';
+import { Utensils, Clock, Award, Users } from 'lucide-react';
 
 const AboutUs: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ const AboutUs: React.FC = () => {
               <div className="bg-white shadow-md rounded-lg p-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-pizza-orange rounded-full flex items-center justify-center">
-                    <Chef className="text-pizza-brown" size={24} />
+                    <Utensils className="text-pizza-brown" size={24} />
                   </div>
                   <h3 className="text-xl font-semibold text-pizza-brown">Master Chefs</h3>
                 </div>
