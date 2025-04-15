@@ -4,19 +4,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from '@/components/ui/use-toast';
 
-interface PizzaItem {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  category: string;
-}
-
-const Menu: React.FC<{ setActivePage: (page: string) => void }> = ({ setActivePage }) => {
+const Menu = ({ setActivePage }) => {
   const [activeCategory, setActiveCategory] = useState('all');
   
-  const pizzas: PizzaItem[] = [
+  const pizzas = [
     {
       id: 1,
       name: "Margherita Supreme",
@@ -83,14 +74,14 @@ const Menu: React.FC<{ setActivePage: (page: string) => void }> = ({ setActivePa
     }
   ];
 
-  const addToCart = (pizza: PizzaItem) => {
+  const addToCart = (pizza) => {
     toast({
       title: "Added to cart!",
       description: `${pizza.name} has been added to your cart.`,
     });
   };
 
-  const handleOrderNow = (pizza: PizzaItem) => {
+  const handleOrderNow = (pizza) => {
     toast({
       title: "Proceeding to checkout",
       description: `Your order for ${pizza.name} is being processed.`,
@@ -172,13 +163,7 @@ const Menu: React.FC<{ setActivePage: (page: string) => void }> = ({ setActivePa
   );
 };
 
-interface PizzaCardProps {
-  pizza: PizzaItem;
-  onAddToCart: () => void;
-  onOrderNow: () => void;
-}
-
-const PizzaCard: React.FC<PizzaCardProps> = ({ pizza, onAddToCart, onOrderNow }) => {
+const PizzaCard = ({ pizza, onAddToCart, onOrderNow }) => {
   const [imageError, setImageError] = useState(false);
 
   const handleImageError = () => {
